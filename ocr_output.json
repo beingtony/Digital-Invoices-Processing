@@ -1,0 +1,83 @@
+[
+    {
+        "invoice_no": "I101",
+        "vendor_name": "Salesforce",
+        "vendor_email": "sales@salesforce.com",
+        "approval_date": "23 Apr 2025",
+        "flag_date": "23 Apr 2025",
+        "amount": "Rs.5,10,235",
+        "status": "approved"
+    },
+    {
+        "invoice_no": "I121",
+        "vendor_name": "Oracle",
+        "vendor_email": "accounts@oracle.com",
+        "approval_date": "23 Apr 2025",
+        "flag_date": "16 Mar 2025",
+        "amount": "Rs.3,56,435",
+        "status": "approved"
+    },
+    {
+        "invoice_no": "I122",
+        "vendor_name": "Google",
+        "vendor_email": "finance@google.com",
+        "approval_date": "23 Apr 2025",
+        "flag_date": "16 Mar 2025",
+        "amount": "Rs.8,12,964",
+        "status": "approved"
+    },
+    {
+        "invoice_no": "I131",
+        "vendor_name": "AWS",
+        "vendor_email": "sales@aws.com",
+        "approval_date": "23 Apr 2025",
+        "flag_date": "23 Apr 2025",
+        "amount": "Rs.4,25,528",
+        "status": "approved"
+    },
+    {
+        "invoice_no": "I131",
+        "vendor_name": "SAP labs",
+        "vendor_email": "fin@sap.com",
+        "approval_date": "04 Jan 2025",
+        "flag_date": "N/A",
+        "amount": "Rs.51,235",
+        "status": "approved"
+    },
+    {
+        "invoice_no": "I237",
+        "vendor_name": "Rolls Royce Data Lab",
+        "vendor_email": "sales@rollsroyce.com",
+        "approval_date": "N/A",
+        "flag_date": "15 Jan 2025",
+        "amount": "Rs.14,10,235",
+        "status": "flagged"
+    },
+    {
+        "invoice_no": "I128",
+        "vendor_name": "Apple",
+        "vendor_email": "finance@apple.com",
+        "approval_date": "N/A",
+        "flag_date": "03 Jan 2025",
+        "amount": "Rs.1,02,272",
+        "status": "flagged"
+    },
+    {
+        "invoice_no": "I240",
+        "vendor_name": "Berkshire Hathaway",
+        "vendor_email": "sales@notanemail.com",
+        "approval_date": "N/A",
+        "flag_date": "15 Jan 2025",
+        "amount": "Rs.20,99,500",
+        "status": "flagged"
+    },
+    {
+        "invoice_no": "I181",
+        "vendor_name": "Morgan Stanley",
+        "vendor_email": "salsa.mogsta@gmail.com",
+        "approval_date": "16 Mar 2025",
+        "flag_date": "23 Apr 2025",
+        "amount": "Rs.25,30,499",
+        "status": "flagged"
+    }
+]

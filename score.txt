@@ -1,0 +1,96 @@
+1. Positive Fields
+These fields contribute to the score if they are present and valid. Each field has a specific weight assigned to it.
+
+Field	Weight	Description
+invoice_number	5	Unique identifier for the invoice.
+invoice_date	5	Date the invoice was issued.
+due_date	5	Payment due date.
+vendor_name	5	Name of the vendor or supplier.
+vendor_id	5	Unique identifier for the vendor.
+po_number	5	Reference to the associated purchase order.
+total_amount	5	Total amount payable on the invoice.
+line_item_details	10	Item description, quantity, unit price, and line total for each line item.
+tax_details	5	Tax rate and tax amount.
+discounts	5	Discount rate and discount amount.
+po_line_items	10	Item description, quantity ordered, and unit price from the purchase order.
+po_total_amount	5	Total amount on the purchase order.
+invoice_submission_date	5	Date the invoice was submitted.
+payment_due_date	5	Date by which payment is due.
+early_payment_discount	5	Discount offered for early payment.
+Total Positive Score: 85 (sum of all positive field weights).
+
+2. Negative Fields
+These fields decrease the score if they are problematic or missing. Each field has a specific weight assigned to it.
+
+Field	Weight	Description
+is_handwritten	10	If the invoice is handwritten, deduct points.
+is_duplicate	10	If the invoice is a duplicate, deduct points.
+has_unusual_amounts	10	If the invoice amount is significantly higher or lower than usual, deduct points.
+late_payment_penalty	5	If there is a penalty for late payment, deduct points.
+Total Negative Deductions: Up to 35 (sum of all negative field weights).
+
+3. Mathematical Validation
+This step ensures the invoice calculations are correct. If the calculations are incorrect, 20 points are deducted from the total score.
+
+What is Validated?
+Line Item Calculations:
+
+For each line item, check if:
+
+line_total
+=
+quantity
+×
+unit_price
+line_total=quantity×unit_price
+Subtotal Calculation:
+
+Calculate the subtotal as the sum of all line totals.
+
+Total Amount Calculation:
+
+Check if the vendor-provided total_amount matches the expected total:
+
+expected_total
+=
+subtotal
++
+(
+subtotal
+×
+tax_rate
+)
+−
+(
+subtotal
+×
+discount_rate
+)
+expected_total=subtotal+(subtotal×tax_rate)−(subtotal×discount_rate)
+If any of these calculations are incorrect, the invoice is flagged, and 20 points are deducted.
+
+4. Final Score Calculation
+Calculate Positive Score:
+
+Sum the weights of all positive fields that are present and valid.
+
+Calculate Negative Score:
+
+Subtract the weights of all negative fields that are problematic or missing.
+
+Validate Mathematical Correctness:
+
+If the calculations are incorrect, deduct 20 points.
+
+Normalize to Percentage:
+
+Convert the final score to a percentage out of 100 using the formula:
+
+Percentage Score=(Achieved Score
+Maximum Possible Score (85)
+)×100
+Percentage Score=( 
+Maximum Possible Score (85)
+Achieved Score
+​
+ )×100
